@@ -46,3 +46,4 @@ Thumbs.db
 *.log
 config.json
 uploads/
+package-lock.json
