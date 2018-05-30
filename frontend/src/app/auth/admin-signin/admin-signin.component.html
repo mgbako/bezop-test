@@ -1,0 +1,41 @@
+<!--===========login start===========-->
+
+<div class="container auth">
+
+    <form class="form-signin" (ngSubmit)="onSignin(f)" #f="ngForm">
+        <a href="" class="brand text-center">
+            <img src="assets/img/logo-dark.png" class="logo" alt=""/>
+        </a>
+        <h2 class="form-signin-heading">Please sign in to you Admin Account</h2>
+        <div class="form-group">
+            <label for="inputEmail" class="sr-only">Email</label>
+            <input type="email" id="inputEmail" class="form-control" placeholder="Enter Email" ngModel required name="email">
+        </div>
+
+        <div class="form-group">
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input type="password" id="inputPassword" class="form-control" placeholder="Password" ngModel required name="password">
+        </div>
+
+        <div class="checkbox mb-4 mt-4 hidden">
+            <label class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input">
+                <span class="custom-control-indicator"></span>
+                <span class="custom-control-description">
+                    Remember me
+                </span>
+            </label>
+            <a routerLink="/recover"  class="float-right text-muted hiiden">Forgot Password ?</a>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" [disabled]="!f.valid" type="submit">Sign in</button>
+
+        <div class="mt-4">
+            <span>
+                Don't have an account yet ?
+            </span>
+            <a routerLink="/signup" class="text-primary">Sign Up</a>
+        </div>
+    </form>
+
+</div>
+<!--===========login end===========-->

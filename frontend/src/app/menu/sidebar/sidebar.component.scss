@@ -1,0 +1,22 @@
+.left-sidebar {
+  color: #fff;
+  background: #176fa1;
+}
+
+.sidebar-menu ul li a {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 16px;
+  color: #ddd;
+
+  i{
+    color: #ddd;    
+  }
+}
+
+.sidebar-menu ul li a.active, .sidebar-menu ul li a:focus, .sidebar-menu ul li a:hover {
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  color: #ffc734;
+  background: rgba(17, 17, 17, 0.4);
+}

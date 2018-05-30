@@ -1,0 +1,54 @@
+<!--===========header start===========-->
+<header class="app-header navbar">
+
+    <!--brand start-->
+    <div class="navbar-brand">
+      <a class="" href="index-2.html">
+          <img src="assets/img/logo-dark.png" class="img-fluid" alt="">
+      </a>
+    </div>
+    <!--brand end-->
+  
+    <!--left side nav toggle start-->
+    <ul class="nav navbar-nav mr-auto">
+      <li class="nav-item d-lg-none">
+          <button class="navbar-toggler mobile-leftside-toggler" type="button"><i class="fa fa-align-justify"></i></button>
+      </li>
+      <li class="nav-item d-md-down-none">
+          <a class="nav-link navbar-toggler left-sidebar-toggler" href="#"><i class="fa fa-align-justify"></i></a>
+      </li>
+    </ul>
+    <!--left side nav toggle end-->
+  
+    <!--right side nav start-->
+    <ul class="nav navbar-nav ml-auto">
+  
+      <li class="nav-item dropdown dropdown-slide">
+          <a class="nav-link nav-pill user-avatar" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+              <img src="assets/img/user.png" alt="John Doe">
+          </a>
+          <div class="dropdown-menu dropdown-menu-right dropdown-menu-accout">
+              <div class="dropdown-header pb-3">
+                  <div class="media d-user">
+                      <img class="align-self-center mr-3" src="assets/img/user.png" alt="John Doe">
+                      <div class="media-body">
+                          <h5 class="mt-0 mb-0">{{ user.firstname }} {{ user.lastname }}</h5>
+                          <span>{{ user.email}}</span>
+                      </div>
+                  </div>
+              </div>
+
+              <a class="dropdown-item hidden" href="#"><i class=" ti-user"></i> Profile</a>
+  
+              <div class="dropdown-divider hidden"></div>
+
+              <a class="dropdown-item" (click)="onLogout()"><i class=" ti-unlock"></i> Logout</a>
+          </div>
+      </li>
+  
+    </ul>
+  
+    <!--right side nav end-->
+  
+  </header>
+  <!--===========header end===========-->

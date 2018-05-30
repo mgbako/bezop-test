@@ -1,0 +1,58 @@
+<!--===========login start===========-->
+
+<div class="container auth">
+
+  <form class="form-signin" (ngSubmit)="onSignup(f)" #f="ngForm">
+      <a href="" class="brand text-center">
+          <img src="assets/img/logo-dark.png" class="logo" alt=""/>
+      </a>
+      <h2 class="form-signin-heading">Please sign up for an Admin Account</h2>
+
+      <div class="form-group">
+          <label for="inputEmail" class="sr-only">Email address</label>
+          <input type="email" id="inputEmail" class="form-control" placeholder="Email address" ngModel name="email" required>
+      </div>
+
+      <div class="form-group">
+          <label for="inputPhone" class="sr-only">Phone Number</label>
+          <input type="tel" id="inputPhone" class="form-control" placeholder="Phone Number" ngModel name="phone" required>
+      </div>
+
+      <div class="form-group">
+          <label for="inputUserName" class="sr-only">Username</label>
+          <input type="text" id="inputUserName" class="form-control" placeholder="Username" ngModel name="username" required>
+      </div>
+
+
+      <div class="form-group">
+          <label for="inputFirstname" class="sr-only">First Name</label>
+          <input type="text" id="inputFirstname" class="form-control" placeholder="First Name" ngModel name="firstname">
+      </div>
+
+      <div class="form-group">
+          <label for="inputLastname" class="sr-only">Last Name</label>
+          <input type="text" id="inputLastname" class="form-control" placeholder="Last Name" ngModel name="lastname">
+      </div>
+
+      <div class="form-group">
+          <label for="inputPassword" class="sr-only">Password</label>
+          <input type="password" id="inputPassword" class="form-control" placeholder="Password" ngModel name="password" required>
+      </div>
+
+      <div class="form-group">
+          <label for="inputConfirmPassword" class="sr-only">Confirm Password</label>
+          <input type="password" id="inputConfirmPassword" class="form-control" placeholder="Confirm Password" ngModel name="confirmPassword" required>
+      </div>
+
+      <button class="btn btn-lg btn-primary btn-block" type="submit" [disabled]="!f.valid">Sign up</button>
+
+      <div class="mt-4">
+          <span>
+              Already have an account ?
+          </span>
+          <a routerLink="/signin" class="text-primary">Sign In</a>
+      </div>
+  </form>
+
+</div>
+<!--===========login end===========-->

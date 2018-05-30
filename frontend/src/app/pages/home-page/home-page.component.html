@@ -1,0 +1,119 @@
+
+<app-topbar></app-topbar>
+
+<!--===========app body start===========-->
+<div class="app-body">
+
+    <!--left sidebar start-->
+    <app-sidebar></app-sidebar>
+    <!--left sidebar end-->
+
+    <!--main contents start-->
+    <main class="main-content">
+        <!--page title start-->
+        <div class="page-title">
+            <div class="container-fluid p-0">
+                <div class="row">
+                    <div class="col-8">
+                        <h4 class="mb-0"> Dashboard
+                            <!--<small>statistics, charts many more</small> -->
+                        </h4>
+                        <ol class="breadcrumb mb-0 pl-0 pt-1 pb-0">
+                            <li class="breadcrumb-item active">Dashboard</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--page title end-->
+        <div class="container-fluid">
+
+            <!--state widget start-->
+            <div class="row">
+                <div class="col-xl-4 col-sm-6 mb-4">
+                    <div class="card card-shadow">
+                        <div class="card-body ">
+                            <i class="icon-notebook text-primary f30"></i>
+                            <h6 class="mb-0 mt-3">Topics</h6>
+                            <p class="f12 mb-0">50</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-sm-6 mb-4">
+                    <div class="card card-shadow">
+                        <div class="card-body ">
+                            <i class="icon-user text-info f30"></i>
+                            <h6 class="mb-0 mt-3">Users</h6>
+                            <p class="f12 mb-0">100</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-sm-6 mb-4">
+                    <div class="card card-shadow">
+                        <div class="card-body ">
+                            <i class=" icon-book-open text-danger f30"></i>
+                            <h6 class="mb-0 mt-3">Posts</h6>
+                            <p class="f12 mb-0">100</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--state widget end-->
+
+            <div class="row hidden">
+                <!--Report widget start-->
+                <div class="col-md-12">
+                    <div class="card card-shadow mb-4">
+                        <div class="card-header">
+                            <div class="card-title">
+                                Sales Report
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th class="border-0 ">Name</th>
+                                    <th class="border-0">Type</th>
+                                    <th class="border-0">Active</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Free Black Panther Movie</td>
+                                        <td>Entertainment</td>
+                                        <td>Yes</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Free Popcorn & Drink</td>
+                                        <td>Entertainment</td>
+                                        <td>Yes</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Half Price Any Movie</td>
+                                        <td>Entertainment</td>
+                                        <td>Yes</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!--Report widget end-->
+                
+            </div>
+        </div>
+
+    </main>
+    <!--main contents end-->
+
+    <!--right sidebar start-->
+    <app-right-sidebar></app-right-sidebar>
+    <!--right sidebar end-->
+
+</div>
+<!--===========app body end===========-->
+
+<app-footer></app-footer>
