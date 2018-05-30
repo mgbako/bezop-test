@@ -1,24 +1,26 @@
-import { Component, OnInit } from '@angular/core';
-import { NgForm, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Component, OnInit } from "@angular/core";
+import { NgForm, Validators } from "@angular/forms";
+import { Router } from "@angular/router";
 
-import { Ng4LoadingSpinnerService } from 'ng4-loading-spinner';
+import { Ng4LoadingSpinnerService } from "ng4-loading-spinner";
 
-import { AlertService } from '../../services/alert.service';
-import { AuthService } from '../../services/auth.service';
+import { AlertService } from "../../services/alert.service";
+import { AuthService } from "../../services/auth.service";
 
 @Component({
-  selector: 'app-admin-signin',
-  templateUrl: './admin-signin.component.html',
-  styleUrls: ['./admin-signin.component.scss']
+  selector: "app-admin-signin",
+  templateUrl: "./admin-signin.component.html",
+  styleUrls: ["./admin-signin.component.scss"]
 })
 export class AdminSigninComponent implements OnInit {
+  constructor(
+    private router: Router,
+    private authService: AuthService,
+    private spinnerService: Ng4LoadingSpinnerService,
+    private alertService: AlertService
+  ) {}
 
-  constructor( private router: Router, private authService: AuthService,
-    private spinnerService: Ng4LoadingSpinnerService, private alertService: AlertService) { }
-
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   onSignin(form: NgForm) {
     this.spinnerService.show();
@@ -26,15 +28,15 @@ export class AdminSigninComponent implements OnInit {
     const data = {
       email: form.value.email,
       password: form.value.password
-    }
+    };
 
     this.authService.login(data).subscribe(
       res => {
         this.spinnerService.hide();
-        this.alertService.success(`Welcome ${res.email}`);
+        this.alertService.success(`Welcome ${res.user.email}`);
         console.log(res);
         this.authService.setUser(res);
-        this.router.navigate(['/admin/home']);
+        this.router.navigate(["/admin/home"]);
       },
       error => {
         this.alertService.error(error.message.details);

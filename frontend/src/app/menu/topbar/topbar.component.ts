@@ -1,47 +1,51 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 
-import { Ng4LoadingSpinnerService } from 'ng4-loading-spinner';
+import { Ng4LoadingSpinnerService } from "ng4-loading-spinner";
 
-import { AlertService } from '../../services/alert.service';
-import { AuthService } from '../../services/auth.service';
+import { AlertService } from "../../services/alert.service";
+import { AuthService } from "../../services/auth.service";
 @Component({
-  selector: 'app-topbar',
-  templateUrl: './topbar.component.html',
-  styleUrls: ['./topbar.component.scss']
+  selector: "app-topbar",
+  templateUrl: "./topbar.component.html",
+  styleUrls: ["./topbar.component.scss"]
 })
 export class TopbarComponent implements OnInit {
   user;
   isLoggedIn: boolean;
   loggedInUser: {};
   showRegister: boolean;
-  constructor( private authService: AuthService, private spinnerService: Ng4LoadingSpinnerService, 
+  constructor(
+    private authService: AuthService,
+    private spinnerService: Ng4LoadingSpinnerService,
     private alertService: AlertService,
-    private router: Router) { }
+    private router: Router
+  ) {}
 
   ngOnInit() {
     this.spinnerService.show();
     this.authService.user().then(
-      res => {
-        if(res) {
-          this.user = res;
+      (res: { user; token }) => {
+        if (res) {
+          this.user = res.user;
           this.isLoggedIn = true;
-          this.loggedInUser = res;
+          this.loggedInUser = res.user;
           this.spinnerService.hide();
         } else {
           this.isLoggedIn = false;
           this.spinnerService.hide();
         }
-      }, error => {
+      },
+      error => {
         console.log(error);
         this.spinnerService.hide();
-      });
+      }
+    );
   }
 
-  onLogout(){
+  onLogout() {
     this.isLoggedIn = false;
     this.authService.logout();
-    this.router.navigate(['/signin']);
+    this.router.navigate(["/signin"]);
   }
-
 }

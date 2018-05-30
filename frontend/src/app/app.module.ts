@@ -28,6 +28,7 @@ import { TopicPageComponent } from "./pages/topic-page/topic-page.component";
 import { AdminPageComponent } from "./pages/admin-page/admin-page.component";
 import { AdminSigninComponent } from "./auth/admin-signin/admin-signin.component";
 import { AdminSignupComponent } from "./auth/admin-signup/admin-signup.component";
+import { FileUploadComponent } from './components/file-upload/file-upload.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { AdminSignupComponent } from "./auth/admin-signup/admin-signup.component
     TopicPageComponent,
     AdminPageComponent,
     AdminSigninComponent,
-    AdminSignupComponent
+    AdminSignupComponent,
+    FileUploadComponent
   ],
   imports: [
     BrowserModule,
