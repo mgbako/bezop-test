@@ -1,0 +1,19 @@
+.btn-outline-primary:hover, .btn-outline-primary:not([disabled]):not(.disabled).active, .btn-outline-primary:not([disabled]):not(.disabled):active, .btn-primary, .card-primary, .show>.btn-outline-primary.dropdown-toggle {
+  border-color: #176FA1;
+  background-color: #176FA1;
+}
+
+.btn-primary:hover, .btn-primary:not([disabled]):not(.disabled).active, .btn-primary:not([disabled]):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+  border-color: #0069d9;
+  background-color: #0069d9;
+}
+
+.btn-outline-warning:hover, .btn-outline-warning:not([disabled]):not(.disabled).active, .btn-outline-warning:not([disabled]):not(.disabled):active, .btn-warning, .card-warning, .show>.btn-outline-warning.dropdown-toggle {
+  border-color: $secondary;
+  background-color: $secondary;
+}
+
+.btn-primary.disabled, .btn-primary:disabled {
+  border-color: #90adcc;
+  background-color: #90adcc;
+}

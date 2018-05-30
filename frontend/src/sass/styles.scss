@@ -1,0 +1,39 @@
+@import 'variables';
+@import 'buttons';
+@import 'alerts';
+
+.text-primary {
+  color: $primary!important;
+}
+
+app-root {
+  height: 100vh;
+}
+
+.app-body{
+  height: calc(100vh - 110px);
+}
+
+.auth{
+  &.container {
+    max-width: 720px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .form-signin {
+    margin: 0;
+    width: 450px;
+  }
+}
+
+.aws-container {
+  background-color: #176fa1;
+}
+
+.form-control:focus {
+  border-color: #176fa1;
+  box-shadow: none;
+}
