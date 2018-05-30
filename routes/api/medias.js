@@ -54,7 +54,7 @@ router
           error: err
         });
       } else {
-        let hosturl = 'http://localhost:5000';
+        let hosturl = process.env.API_URL || 'http://localhost:5000';
         const newMedia = new Media({
           path: `${hosturl}/assets/uploads/${req.file.filename}`
         });

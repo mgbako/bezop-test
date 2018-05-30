@@ -24,7 +24,6 @@ import { TopbarComponent } from "./menu/topbar/topbar.component";
 import { FooterComponent } from "./footer/footer.component";
 import { RightSidebarComponent } from "./right-sidebar/right-sidebar.component";
 import { HomePageComponent } from "./pages/home-page/home-page.component";
-import { TopicPageComponent } from "./pages/topic-page/topic-page.component";
 import { AdminPageComponent } from "./pages/admin-page/admin-page.component";
 import { AdminSigninComponent } from "./auth/admin-signin/admin-signin.component";
 import { AdminSignupComponent } from "./auth/admin-signup/admin-signup.component";
@@ -38,7 +37,6 @@ import { FileUploadComponent } from "./components/file-upload/file-upload.compon
     FooterComponent,
     RightSidebarComponent,
     HomePageComponent,
-    TopicPageComponent,
     AdminPageComponent,
     AdminSigninComponent,
     AdminSignupComponent,

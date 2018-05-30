@@ -2,10 +2,11 @@ import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { HttpErrorResponse } from "@angular/common/http";
 import { ErrorObservable } from "rxjs/observable/ErrorObservable";
+import { environment } from "../../environments/environment";
 
 @Injectable()
 export class HttpService {
-  private baseUrl = `http://localhost:5000/api/`;
+  private baseUrl = environment.apiUrl;
 
   constructor(public http: HttpClient) {}
 
