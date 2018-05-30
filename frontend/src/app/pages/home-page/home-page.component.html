@@ -50,31 +50,17 @@
           <div class="card card-shadow mb-4">
             <div class="card-header">
               <div class="card-title">
-                All Topics
+                All Medias
               </div>
             </div>
-            <div class="card-body">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col">Name</th>
-                    <th scope="col">Actions</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr *ngFor="let topic of topics">
-                    <td>{{ topic.name }}</td>
-                    <td>
-                      <button type="button" class="btn btn-sm  btn-danger" (click)="onEdit(topic)">
-                        <i class="icon-pencil "></i>
-                      </button>
-                      <button type="button" class="btn btn-sm  btn-warning" (click)="onDelete(topic)">
-                        <i class="icon-trash"></i>
-                      </button>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+            <div class="card-body medias">
+              <div class="row">
+                <div class="col-md-3 media" *ngFor="let media of medias">
+                  <div class="card">
+                    <img [src]="media.path" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

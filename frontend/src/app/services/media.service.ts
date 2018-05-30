@@ -7,18 +7,18 @@ import { ErrorObservable } from "rxjs/observable/ErrorObservable";
 import { AuthService } from "./auth.service";
 
 @Injectable()
-export class PostService {
+export class MediaService {
   constructor(private http: HttpService, private authService: AuthService) {}
 
-  topic(data) {
+  newMedia(data) {
     return this.http
-      .post("admin/categories", data, this.authService.loadToken())
+      .post("medias", data, this.authService.loadToken())
       .pipe(map(res => res), catchError(this.http.handlerError));
   }
 
-  getTopic() {
+  getMedias() {
     return this.http
-      .get("admin/categories", this.authService.loadToken())
+      .get("medias", this.authService.loadToken())
       .pipe(map(res => res), catchError(this.http.handlerError));
   }
 }

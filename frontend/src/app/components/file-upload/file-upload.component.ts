@@ -1,6 +1,10 @@
 import { Component, OnInit } from "@angular/core";
 import { HttpClient, HttpRequest } from "@angular/common/http";
 
+import { Ng4LoadingSpinnerService } from "ng4-loading-spinner";
+import { AlertService } from "../../services/alert.service";
+import { MediaService } from "../../services/media.service";
+
 @Component({
   selector: "app-file-upload",
   templateUrl: "./file-upload.component.html",
@@ -9,7 +13,12 @@ import { HttpClient, HttpRequest } from "@angular/common/http";
 export class FileUploadComponent implements OnInit {
   selectedFile: File = null;
 
-  constructor(public http: HttpClient) {}
+  constructor(
+    public http: HttpClient,
+    private spinnerService: Ng4LoadingSpinnerService,
+    private alertService: AlertService,
+    private mediaService: MediaService
+  ) {}
 
   ngOnInit() {}
 
@@ -19,15 +28,16 @@ export class FileUploadComponent implements OnInit {
   }
 
   onUpload() {
+    this.spinnerService.show();
     const formData: FormData = new FormData();
     formData.append("file", this.selectedFile);
 
     console.log("FormData", formData);
 
-    this.http
-      .post("http://localhost:5000/api/medias", formData)
-      .subscribe(res => {
-        console.log(res);
-      });
+    this.mediaService.newMedia(formData).subscribe(res => {
+      this.spinnerService.hide();
+      this.alertService.success(`file Uploaded`);
+      console.log(res);
+    });
   }
 }

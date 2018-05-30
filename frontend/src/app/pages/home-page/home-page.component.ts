@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { MediaService } from "../../services/media.service";
 
 @Component({
   selector: "app-home-page",
@@ -6,9 +7,18 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./home-page.component.scss"]
 })
 export class HomePageComponent implements OnInit {
-  chart = [];
+  medias = [{ path: "/ho.jpg" }, { path: "/h1.png" }];
 
-  constructor() {}
+  constructor(private mediaService: MediaService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.getMedias();
+  }
+
+  getMedias() {
+    this.mediaService.getMedias().subscribe(res => {
+      console.log(res);
+      this.medias = res;
+    });
+  }
 }

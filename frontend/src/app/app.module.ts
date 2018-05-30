@@ -14,7 +14,7 @@ import { HttpService } from "./services/http.service";
 import { AuthGuard } from "./auth-guard.service";
 import { AdminService } from "./services/admin.service";
 import { AlertService } from "./services/alert.service";
-import { PostService } from "./services/post.service";
+import { MediaService } from "./services/media.service";
 
 // Components
 import { AppComponent } from "./app.component";
@@ -28,7 +28,7 @@ import { TopicPageComponent } from "./pages/topic-page/topic-page.component";
 import { AdminPageComponent } from "./pages/admin-page/admin-page.component";
 import { AdminSigninComponent } from "./auth/admin-signin/admin-signin.component";
 import { AdminSignupComponent } from "./auth/admin-signup/admin-signup.component";
-import { FileUploadComponent } from './components/file-upload/file-upload.component';
+import { FileUploadComponent } from "./components/file-upload/file-upload.component";
 
 @NgModule({
   declarations: [
@@ -58,7 +58,7 @@ import { FileUploadComponent } from './components/file-upload/file-upload.compon
     HttpService,
     AdminService,
     AlertService,
-    PostService
+    MediaService
   ],
   bootstrap: [AppComponent]
 })
