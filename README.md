@@ -1,37 +1,32 @@
-# 1 - Hello world
+# Bezop Test Project
 
 ![Build Status][ci-badge]
 
-This folder contains the sample code for the [Hello world][step-1]
-tutorial. Please refer to the tutorial for instructions on configuring, running,
-and deploying this sample.
+This Repository contains the code for the [Bezop Test Project][step-1]. Please see below for instructions on configuring, running,
+and deploying this test project.
 
 [ci-badge]: https://storage.googleapis.com/nodejs-getting-started-tests-badges/1-tests.svg
-[step-1]: https://cloud.google.com/nodejs/getting-started/hello-world
+[step-1]: https://bezop-project-205420.appspot.com
 
 # Simple instructions
 
 1.  Install [Node.js](https://nodejs.org/en/).
-
-    * Optional: Install [Yarn](https://yarnpkg.com/).
-
-1.  Install [git](https://git-scm.com/).
-1.  Create a [Google Cloud Platform project](https://console.cloud.google.com).
-1.  Install the [Google Cloud SDK](https://cloud.google.com/sdk/).
+2.  Create a [Google Cloud Platform project](https://console.cloud.google.com).
+3.  Install the [Google Cloud SDK](https://cloud.google.com/sdk/).
 
     * After downloading the SDK, initialize it:
 
-            gcloud init
+                gcloud init
 
-1.  Clone the repository:
+4.  Clone the repository:
 
-        git clone https://github.com/GoogleCloudPlatform/nodejs-getting-started.git
+        git clone https://github.com/mgbako/bezop-test.git
 
-1.  Change directory:
+5.  Change directory:
 
-        cd nodejs-getting-started/1-hello-world
+        cd nodejs-getting-started/bexop-test
 
-1.  Install dependencies using NPM or Yarn:
+6.  Install dependencies using NPM or Yarn:
 
     * Using NPM:
 
@@ -41,7 +36,7 @@ and deploying this sample.
 
             yarn install
 
-1.  Start the app using NPM or Yarn:
+7.  Start the app using NPM or Yarn:
 
     * Using NPM:
 
@@ -51,12 +46,12 @@ and deploying this sample.
 
             yarn start
 
-1.  View the app at [http://localhost:8080](http://localhost:8080).
+8.  View the app at [http://localhost:5000](http://localhost:5000).
 
-1.  Stop the app by pressing `Ctrl+C`.
+9.  Stop the app by pressing `Ctrl+C`.
 
-1.  Deploy the app:
+10. Deploy the app:
 
         gcloud app deploy
 
-1.  View the deployed app at [https://YOUR_PROJECT_ID.appspot.com](https://YOUR_PROJECT_ID.appspot.com).
+11. View the deployed app at [https://YOUR_PROJECT_ID.appspot.com](https://YOUR_PROJECT_ID.appspot.com).
