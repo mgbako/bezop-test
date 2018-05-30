@@ -2,37 +2,20 @@
   "name": "nodejs-getting-started",
   "version": "1.0.0",
   "description": "End to end sample for running Node.js applications on Google Cloud Platform",
-  "repository": "https://github.com/GoogleCloudPlatform/nodejs-getting-started",
+  "repository": "https://github.com/mgbako/bezop-test.git",
   "private": true,
   "scripts": {
     "client-install": "npm intall --prefix frontend",
     "start": "node app.js",
     "server": "nodemon app.js",
     "client": "npm start --prefix frontend",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "e2e": "repo-tools test deploy",
-    "test": "repo-tools test app",
-    "cover": "nyc --cache npm test; nyc report --reporter=html"
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "Google Inc.",
-  "contributors": [
-    {
-      "name": "Jon Wayne Parrott",
-      "email": "jonwayne@google.com"
-    },
-    {
-      "name": "Jonathan Simon",
-      "email": "jbsimon@google.com"
-    },
-    {
-      "name": "Jason Dobry",
-      "email": "jdobry@google.com"
-    },
-    {
-      "name": "Ace Nassri",
-      "email": "anassri@google.com"
-    }
-  ],
+  "contributors": [{
+    "name": "Mgbako John",
+    "email": "jmgbako@gmail.com"
+  }],
   "cloud-repo-tools": {
     "requiresKeyFile": true,
     "requiresProjectId": true,

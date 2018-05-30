@@ -38,6 +38,9 @@ and deploying this test project.
 
 7.  Start the app using NPM or Yarn:
 
+    * Using NPM to start the development server
+      `npm run dev`
+
     * Using NPM:
 
             npm start
