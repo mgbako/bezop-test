@@ -40,7 +40,7 @@ export class HttpService {
       headers = headers.append("Authorization", token);
     }
 
-    return this.http.post(this.baseUrl + url, data, { headers: headers });
+    return this.http.put(this.baseUrl + url, data, { headers: headers });
   }
 
   handlerError(error: HttpErrorResponse) {

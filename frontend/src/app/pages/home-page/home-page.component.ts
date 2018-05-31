@@ -39,10 +39,11 @@ export class HomePageComponent implements OnInit {
       this.spinnerService.show();
       console.log(this.selectedFile);
       this.mediaService.trash(this.selectedFile._id).subscribe(res => {
+        this.selectedFile = null;
         this.mediaService.getMedias();
         this.spinnerService.hide();
-        this.alertService.success(`file Uploaded`);
-        console.log(res);
+        this.alertService.success(`file Deleted`);
+        this.getMedias();
       });
       return;
     }
