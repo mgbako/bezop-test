@@ -2,14 +2,20 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title>Frontend</title>
   <base href="/">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="Mgbako John">
+
+  <!--favicon icon-->
+  <link rel="icon" href="/favicon.ico">
+  <title>Bezop</title>
+
+
   <!--google font-->
-  <link href="http://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
 
 
   <!--common style-->
@@ -22,11 +28,19 @@
 
   <!--custom css-->
   <link href="assets/css/main.min.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="assets/vendor/html5shiv.js"></script>
+  <script src="assets/vendor/respond.min.js"></script>
+  <![endif]-->
 </head>
 
-<body>
+<body class="app header-fixed left-sidebar-fixed right-sidebar-fixed right-sidebar-overlay right-sidebar-hidden">
+
   <app-root></app-root>
 
+  <!-- Placed js at the end of the page so the pages load faster -->
   <script src="assets/vendor/jquery/jquery.min.js"></script>
   <script src="assets/vendor/jquery-ui-1.12.1/jquery-ui.min.js"></script>
   <script src="assets/vendor/popper.min.js"></script>
@@ -35,8 +49,13 @@
   <script src="assets/vendor/lobicard/js/lobicard.js"></script>
   <script class="include" type="text/javascript" src="assets/vendor/jquery.dcjqaccordion.2.7.js"></script>
   <script src="assets/vendor/jquery.scrollTo.min.js"></script>
-  <script src="assets/js/scripts.min.js"></script>
 
+  <!--[if lt IE 9]>
+  <script src="assets/vendor/modernizr.js"></script>
+  <![endif]-->
+
+  <!--init scripts-->
+  <script src="assets/js/scripts.min.js"></script>
 </body>
 
 </html>

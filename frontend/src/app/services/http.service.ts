@@ -32,6 +32,17 @@ export class HttpService {
     return this.http.post(this.baseUrl + url, data, { headers: headers });
   }
 
+  put(url: string, data = null, token = null) {
+    let headers: HttpHeaders = new HttpHeaders();
+    headers = headers.append("Content-type", "application/json");
+
+    if (token) {
+      headers = headers.append("Authorization", token);
+    }
+
+    return this.http.post(this.baseUrl + url, data, { headers: headers });
+  }
+
   handlerError(error: HttpErrorResponse) {
     const errors = {
       status: error.status,

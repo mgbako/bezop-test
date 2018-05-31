@@ -4,26 +4,31 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const morgan = require("morgan");
 const passport = require("passport");
-
+const cors = require('cors');
 const app = express();
 
 const db = require("./config/keys").mongoURI;
 
 const port = process.env.PORT || 5000;
 
-const users = require("./routes/api/users");
-const profile = require("./routes/api/profile");
-const posts = require("./routes/api/posts");
-const mediaRoutes = require('./routes/api/medias');
+
+
+// SET CORS
+app.use(cors());
 
 // Body Parser Middleware
 app.use(bodyParser.urlencoded({
-  extended: false
+  extended: true
 }));
 app.use(bodyParser.json());
 app.use(bodyParser.json({
   type: "application/json"
 }));
+
+const users = require("./routes/api/users");
+const profile = require("./routes/api/profile");
+const posts = require("./routes/api/posts");
+const mediaRoutes = require('./routes/api/medias');
 
 app.use(morgan("combined"));
 

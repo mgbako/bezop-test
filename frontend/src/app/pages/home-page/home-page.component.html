@@ -51,12 +51,13 @@
             <div class="card-header">
               <div class="card-title">
                 All Medias
+                <button class="btn btn-danger btn-sm float-right" *ngIf="selectedFile" (click)="onDelete()">Delete</button>
               </div>
             </div>
             <div class="card-body medias">
               <div class="row">
                 <div class="col-md-3 media" *ngFor="let media of medias">
-                  <div class="card">
+                  <div class="card-img" *ngIf="media.path" (click)="onSelected(media)">
                     <img [src]="media.path" alt="" class="img-fluid">
                   </div>
                 </div>

@@ -3,6 +3,8 @@ import { HttpClient, HttpRequest } from "@angular/common/http";
 
 import { Ng4LoadingSpinnerService } from "ng4-loading-spinner";
 import { AlertService } from "../../services/alert.service";
+import { environment } from "../../../environments/environment";
+
 import { MediaService } from "../../services/media.service";
 
 @Component({
@@ -34,7 +36,8 @@ export class FileUploadComponent implements OnInit {
 
     console.log("FormData", formData);
 
-    this.mediaService.newMedia(formData).subscribe(res => {
+    this.http.post(environment.apiUrl + "medias", formData).subscribe(res => {
+      this.mediaService.getMedias();
       this.spinnerService.hide();
       this.alertService.success(`file Uploaded`);
       console.log(res);

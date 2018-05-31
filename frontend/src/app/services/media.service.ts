@@ -12,13 +12,19 @@ export class MediaService {
 
   newMedia(data) {
     return this.http
-      .post("medias", data, this.authService.loadToken())
+      .post("medias", data)
       .pipe(map(res => res), catchError(this.http.handlerError));
   }
 
   getMedias() {
     return this.http
-      .get("medias", this.authService.loadToken())
+      .get("medias")
+      .pipe(map(res => res), catchError(this.http.handlerError));
+  }
+
+  trash(id) {
+    return this.http
+      .put("medias/" + id + "/trash")
       .pipe(map(res => res), catchError(this.http.handlerError));
   }
 }

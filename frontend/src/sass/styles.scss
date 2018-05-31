@@ -1,20 +1,19 @@
 @import 'variables';
 @import 'buttons';
 @import 'alerts';
-
 .text-primary {
-  color: $primary!important;
+  color: $primary !important;
 }
 
 app-root {
   height: 100vh;
 }
 
-.app-body{
+.app-body {
   height: calc(100vh - 110px);
 }
 
-.auth{
+.auth {
   &.container {
     max-width: 720px;
     height: 100%;
@@ -22,7 +21,6 @@ app-root {
     justify-content: center;
     align-items: center;
   }
-  
   .form-signin {
     margin: 0;
     width: 450px;
