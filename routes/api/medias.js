@@ -56,7 +56,7 @@ router
       } else {
         let hosturl = process.env.API_URL || 'http://localhost:5000';
         const newMedia = new Media({
-          path: `${hosturl}/assets/uploads/${req.file.filename}`
+          path: `${hosturl}assets/uploads/${req.file.filename}`
         });
 
         newMedia.save()
@@ -67,7 +67,7 @@ router
         console.log("req.file", req.file);
 
         res.json({
-          path: `${hosturl}/assets/uploads/${req.file.filename}`
+          path: `${hosturl}assets/uploads/${req.file.filename}`
         });
       }
     });
